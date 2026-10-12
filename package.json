@@ -1,0 +1,17 @@
+{
+  "name": "gohighlevel-dev-toolkit",
+  "version": "0.1.0",
+  "description": "Research notes and a small, tested TypeScript toolkit for building on the GoHighLevel (HighLevel) API v2",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "test": "node --test --experimental-transform-types test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.60.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
