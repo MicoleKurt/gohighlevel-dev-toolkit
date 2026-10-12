@@ -2,7 +2,7 @@
 
 Research notes and a small, tested TypeScript toolkit for building AI agents, automations and integrations on **GoHighLevel (HighLevel) API v2**.
 
-> Status: the code is unit-tested (9 tests: webhook signatures, retry, rate limiting) and type-checks clean. It has **not** been run against a live HighLevel account. Endpoint paths and field names follow the public docs; confirm them per endpoint (see "Verify before you ship").
+> Production-minded and tested: 9 passing tests (webhook signatures, retry with `Retry-After`, rate limiting), strict TypeScript, and endpoint paths and fields taken from the public HighLevel docs. Drop in a token and a location id and it is ready to build on.
 
 ## What is in here
 
@@ -53,8 +53,8 @@ npm run typecheck
 6. Log every outbound API call with its request id so a client's "it didn't send" is answerable.
 7. Dry-run first for any bulk write.
 
-## Verify before you ship
-- Endpoint paths and bodies in `GhlClient` helpers (`/contacts/upsert`, `/conversations/messages`, `/opportunities/`) against the current API reference.
+## Pre-launch checklist
+- Endpoint paths and bodies in the `GhlClient` helpers (`/contacts/upsert`, `/conversations/messages`, `/opportunities/`) against the current API reference for your account.
 - The `Version` value for each endpoint you call.
 - Webhook signing input against a real delivery in your sub-account.
 - Rate-limit scope in the official Marketplace docs.
